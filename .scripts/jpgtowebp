@@ -1,0 +1,14 @@
+for f in *.jpg ; 
+  do 
+    echo 'input file -> ' "$f";
+    echo 'output file -> ' "${f%.*}.webp" ; 
+    cwebp -q 75 "$f" -o "${f%.*}.webp" ; 
+  done
+
+
+
+for i in *.png; 
+  do 
+    sips -s format jpeg $i --out "${i%.*}.jpg" ;
+    cwebp -q 75 "${i%.*}.jpg" -o "${f%.*}.webp" ; 
+  done

@@ -1,0 +1,16 @@
+
+NPM_PACKAGES="${HOME}/.npm-packages"
+
+export PATH="$PATH:$NPM_PACKAGES/bin"
+
+# Android Environment
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export PATH=$PATH:$HOME/.flutter/bin
+
+
+# Custom scripts
+export PATH=$PATH:$HOME/.scripts
+
+export PATH="$PATH:/Users/astrojose/.flutter/bin"

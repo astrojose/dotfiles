@@ -1,0 +1,42 @@
+[init]
+	defaultBranch = main
+[user]
+	name = Joseph Emmanuel
+	email = jossey1918@gmail.com
+[push]
+	default = current
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[core]
+    pager = delta
+    excludesfile = /Users/astrojose/.gitignore
+    editor = vim
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+[alias]
+	s = status
+  l=lo
+	lo = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	aa = 'add .'
+	cm = 'commit -m'
+	acm = 'commit -ma'
+	pat = 'add --patch'
+	ci = commit -v
+	patch = add -p
+	pc = add -p

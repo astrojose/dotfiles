@@ -1,0 +1,76 @@
+# Bash environment 
+alias lh='l -hs'
+alias x='exit'
+alias ':x'='x'
+
+alias cl='clear'
+alias term='open -a Terminal'
+#
+alias v.='vim .'
+alias rmd='rm -fr'
+alias free='free -h'
+alias c='cd'
+alias yt='youtube-dl'
+alias vii='vim .'
+
+# Directory & Files
+alias work='cd ~/Code/Works'
+alias war='cd ~/Code/Works'
+alias ..='cd ..'
+alias ...='cd ../../'
+
+# Git
+alias git=hub
+
+alias gitacm='git add && git cm'
+alias gitdiff='git diff '
+alias gitamend='git commit --amend '
+alias gits='git status'
+alias gitstatus='git status'
+alias gitlo='git lo'
+alias gitco='git checkout'
+alias gitcb='git checkout -b'
+alias gitlog='git log'
+alias gitcmt='git commit'
+alias gitres='git restore'
+alias gitadd='git add .'
+
+# General 
+alias art="php artisan"
+alias tinker="php artisan tinker"
+alias v='xclip -o'
+alias ip3='ipython3'
+# PHPUnit test commands
+
+# HTTP Servers
+alias 'phs'='php -S localhost:9000'
+alias 'pys'='python3 -m http.server'
+# with filter
+alias 'tef'='art test --filter'
+alias 'teff'='./vendor/bin/phpunit --filter Feature/*'
+alias 'tefu'='./vendor/bin/phpunit --filter Unit/*'
+#with group
+alias 'teg'='./vendor/bin/phpunit --group'
+
+
+alias shconfig="vim ~/.zshrc"
+alias shalias="vim ~/dotfiles/.shalias"
+alias shenv="vim ~/dotfiles/.shenv"
+alias virc="vim ~/dotfiles/.vimrc"
+alias ohmybash="vim ~/.oh-my-bash"
+alias sr='source ~/.zshrc'
+
+alias pretty='python3 -m json.tool'
+alias deploy-uzo='source ~/dotfiles/.scripts/deploy/uzo-web.sh'
+
+
+alias git=hub
+alias exa=ls
+alias bat=cat
+alias pstorm=phpstorm
+alias wstorm=webstorm
+
+
+
+
+
