@@ -47,7 +47,7 @@ Plug 'wakatime/vim-wakatime'
 Plug 'jwalton512/vim-blade'
 Plug 'jacoborus/tender.vim'
 Plug 'rosenfeld/rgrep.vim'
-Plug 'imileszs/ack.vim'
+Plug 'mileszs/ack.vim'
 
 
 

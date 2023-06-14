@@ -10,7 +10,6 @@ alias v.='vim .'
 alias rmd='rm -fr'
 alias free='free -h'
 alias c='cd'
-alias yt='youtube-dl'
 alias vii='vim .'
 
 # Directory & Files
