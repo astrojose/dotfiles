@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # SSH to the server
-ssh root@uzo.biasharaplus.com << 'ENDSSH'
+ssh root@164.92.143.69 << 'ENDSSH'
 
 # Navigate to the app repository
 cd /root/uzo/web

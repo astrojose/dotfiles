@@ -40,3 +40,5 @@
 	ci = commit -v
 	patch = add -p
 	pc = add -p
+	uncommit = 'reset HEAD^'
+
