@@ -48,7 +48,8 @@ Plug 'jwalton512/vim-blade'
 Plug 'jacoborus/tender.vim'
 Plug 'rosenfeld/rgrep.vim'
 Plug 'mileszs/ack.vim'
-
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 
 call plug#end()
@@ -63,6 +64,16 @@ let g:NERDTreeMapActivateNode = 'go'
 let g:NERDTreeMapPreview = 'o'
 let g:vim_jsx_pretty_colorful_config = 1 
 let g:UltiSnipsExpandTrigger="<C-l>"
+
+"" ctr+n will open and close NERDTree
+nnoremap <C-N> :NERDTreeToggle<CR>
+"" <leader> + o will open NERDTree in the file your editing
+nnoremap <leader>o :NERDTreeFind<CR>
+
+
+let $FZF_DEFAULT_COMMAND = 'find .'
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>a :Ag<CR>
 
 if (has("termguicolors"))
  set termguicolors

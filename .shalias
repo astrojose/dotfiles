@@ -26,7 +26,7 @@ alias vii='vim .'
 
 # Directory & Files
 alias work='cd ~/Code/Works'
-alias war='cd ~/Code/Works'
+alias war='cd ~/Code/Me'
 alias ..='cd ..'
 alias ...='cd ../../'
 

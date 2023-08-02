@@ -14,3 +14,4 @@ export PATH=$PATH:$HOME/.flutter/bin
 export PATH=$PATH:$HOME/.scripts
 
 export PATH="$PATH:/Users/astrojose/.flutter/bin"
+export PATH=$PATH:HOME/.composer/vendor/bin
