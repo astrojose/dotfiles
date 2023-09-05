@@ -25,8 +25,8 @@ set sidescroll=1
 set breakindent
 set breakindentopt=sbr
 " I use a unicode curly array with a <backslash><space>
-set showbreak=↪>\
-set guitablabel=\[%N\]\ %t\ %M
+"set showbreak=↪>\
+"set guitablabel=\[%N\]\ %t\ %M
 
 
 set grepprg=grep\ -nrI\ --exclude-dir=target\ --exclude-dir=tmp\ --exclude-dir=log\ --exclude="*.min.js"\ --exclude="*.log"\ $*\ /dev/null
@@ -155,3 +155,5 @@ endfunction
 " <C-g>u breaks current undo, please make your own choice.
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+set pastetoggle=<F2>
+
