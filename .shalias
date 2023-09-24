@@ -78,7 +78,7 @@ alias deploy-uzo='source ~/dotfiles/.scripts/deploy/uzo-web.sh'
 
 alias git=hub
 alias exa=ls
-alias bat=cat
+#alias bat=cat
 alias pstorm=phpstorm
 alias wstorm=webstorm
 
@@ -97,3 +97,6 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 #
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
+alias df='duf'
+alias tree=tre
+alias cat='bat'
