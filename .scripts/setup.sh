@@ -44,5 +44,9 @@ sudo curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.gitignore ~/.gitignore
-ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/dotfiles/.gitmessage ~/.gitmessage
+
+git config --global commit.template ~/.gitmessage
+git config --global core.excludesfile ~/.gitignore
+
 
