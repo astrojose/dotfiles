@@ -157,3 +157,6 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 set pastetoggle=<F2>
 
+#Spell checking and automatic wrapping at the recommended 72 columns to you commit messages
+autocmd Filetype gitcommit setlocal spell textwidth=72
+
