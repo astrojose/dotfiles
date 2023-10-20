@@ -41,4 +41,8 @@
 	patch = add -p
 	pc = add -p
 	uncommit = 'reset HEAD^'
+  cleanup = "!git branch --merged | grep  -v '\\*\\|main\\|develop' | xargs -n 1 -r git branch -d"
 
+
+[commit]
+	template = /Users/astrojose/.gitmessage
