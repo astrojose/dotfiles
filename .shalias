@@ -103,3 +103,4 @@ alias sudo='sudo '
 alias df='duf'
 alias tree=tre
 alias cat='bat'
+alias her='cd ~/Herd'

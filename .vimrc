@@ -1,20 +1,20 @@
 set path+=**
-set wildignore+=**/node_modules/** 
-set wildignore+=**/vendor/** 
+set wildignore+=**/node_modules/**
+set wildignore+=**/vendor/**
 set wildignorecase
 set fileignorecase
 set wildmenu
 set nowrap
 set ignorecase
 set smartcase
-set expandtab 
+set expandtab
 set autoindent
-set shiftwidth=2      
+set shiftwidth=2
 set tabstop=2
 set path=$PWD/**
 set number
-set suffixesadd+=.js 
-set suffixesadd+=.php 
+set suffixesadd+=.js
+set suffixesadd+=.php
 set termguicolors
 set noswapfile
 set autowrite
@@ -63,7 +63,7 @@ autocmd BufNewFile,BufRead *.blade.php set filetype=blade
 
 let g:NERDTreeMapActivateNode = 'go'
 let g:NERDTreeMapPreview = 'o'
-let g:vim_jsx_pretty_colorful_config = 1 
+let g:vim_jsx_pretty_colorful_config = 1
 let g:UltiSnipsExpandTrigger="<C-l>"
 
 "" ctr+n will open and close NERDTree
