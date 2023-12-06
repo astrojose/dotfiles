@@ -26,6 +26,8 @@ alias vii='vim .'
 
 # Directory & Files
 alias work='cd ~/Code/Works'
+alias her='cd ~/Code/Works/art'
+alias work='cd ~/Code/Works'
 alias war='cd ~/Code/Me'
 alias ..='cd ..'
 alias ...='cd ../../'
@@ -33,6 +35,7 @@ alias ...='cd ../../'
 # Git
 alias git=hub
 
+alias git-pmd='git pull-request -op -a astrojose -F - < pr.md'
 alias gitacm='git add && git cm'
 alias gitdiff='git diff '
 alias gitamend='git commit --amend '
