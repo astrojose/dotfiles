@@ -31,18 +31,27 @@
     colorMoved = default
 [alias]
 	s = status
-  l=lo
+  loo=log --oneline
 	lo = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	aa = 'add .'
 	cm = 'commit -m'
+	dev = 'checkout develop'
 	acm = 'commit -ma'
 	pat = 'add --patch'
 	ci = commit -v
 	patch = add -p
 	pc = add -p
+  feat-task = log origin/develop.. --oneline --format="%s"
+  feat-logs = log origin/develop.. --stat
+  pr-task = log origin/$(git symbolic-ref --short HEAD).. --oneline
+  pr-logs = log origin/$(git symbolic-ref --short HEAD).. --oneline
 	uncommit = 'reset HEAD^'
   cleanup = "!git branch --merged | grep  -v '\\*\\|main\\|develop' | xargs -n 1 -r git branch -d"
+  pmd = "!f() { git pull-request -op -a astrojose -F - < pr.md; }; f"
+
 
 
 [commit]
 	template = /Users/astrojose/.gitmessage
+[hub]
+	protocol = git
