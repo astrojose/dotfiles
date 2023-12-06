@@ -1,4 +1,3 @@
-set hlsearch
 set path+=**
 set wildignore+=**/node_modules/** 
 set wildignore+=**/vendor/** 
@@ -50,7 +49,9 @@ Plug 'rosenfeld/rgrep.vim'
 Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
+Plug 'doums/darcula'
+Plug 'voldikss/vim-floaterm'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
@@ -80,9 +81,10 @@ if (has("termguicolors"))
 endif
 
 syntax enable
-"colorscheme tender
+colorscheme tender
 
-let g:lightline = { 'colorscheme': 'tender' }
+" let g:lightline = { 'colorscheme': 'tender' }
+let g:lightline = { 'colorscheme': 'darculaOriginal' }
 
 set grepprg=grep\ -nrI\ --exclude-dir=target\ --exclude-dir=tmp\ --exclude-dir=log\ --exclude="*.min.js"\ --exclude="*.log"\ $*\ /dev/null --exclude="node_modules/*" --exclude="vendor/*"
 :
@@ -91,7 +93,7 @@ noremap <C-S> :update<CR>
 vnoremap <C-S> <C-C>:update<CR>
 inoremap <C-S> <C-O>:update<CR>
 " gf to create new file if not exist
-noremap <leader>gf :e <cfile><cr>
+" noremap <leader>gf :e <cfile><cr>
 
 
 
@@ -157,6 +159,47 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 set pastetoggle=<F2>
 
-#Spell checking and automatic wrapping at the recommended 72 columns to you commit messages
+" Spell checking and automatic wrapping at the recommended 72 columns to you commit messages
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
+" Disable Arrow Keys
+" Remove newbie crutches in Command Mode
+cnoremap <Down> <Nop>
+cnoremap <Left> <Nop>
+cnoremap <Right> <Nop>
+cnoremap <Up> <Nop>
+
+" Remove newbie crutches in Insert Mode
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+inoremap <Up> <Nop>
+
+" Remove newbie crutches in Normal Mode
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+nnoremap <Up> <Nop>
+
+" Remove newbie crutches in Visual Mode
+vnoremap <Down> <Nop>
+vnoremap <Left> <Nop>
+vnoremap <Right> <Nop>
+vnoremap <Up> <Nop>
+
+" vim-commentary: installed via webinstall.dev/vim-commentary
+source ~/.vim/plugins/commentary.vim
+
+" Floatterm Configuration| keymaps
+" Configuration example
+let g:floaterm_keymap_new    = '<F7>'
+let g:floaterm_keymap_prev   = '<F8>'
+let g:floaterm_keymap_next   = '<F9>'
+let g:floaterm_keymap_toggle = '<F12>'
+
+" Allow gf to open non-existend files
+map gf :edit <cfile><cr>
+
+" Maintain the cursor positioin when yaking a visual seleection
+vnoremap y myy`y
+vnoremap Y myY`y
