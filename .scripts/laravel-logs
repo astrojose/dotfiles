@@ -1,0 +1,26 @@
+#!/bin/bash
+
+LOG_FILE="storage/logs/laravel.log"
+
+clear
+# Function to tail the log file
+tail_log() {
+  tail -f "$LOG_FILE"
+}
+
+# Function to clear the log file
+clear_log() {
+  > "$LOG_FILE"
+  echo "Log file cleared."
+}
+
+# Main script
+# Main script
+if [ $# -eq 0 ]; then
+  tail_log
+elif [ "$1" == "clear" ]; then
+  clear_log
+else
+  echo "Usage: $0 {clear}"
+  exit 1
+fi
