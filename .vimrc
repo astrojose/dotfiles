@@ -11,14 +11,14 @@ set expandtab
 set autoindent
 set shiftwidth=2
 set tabstop=2
-set path=$PWD/**
+"set path=$PWD/**
 set number
 set suffixesadd+=.js
 set suffixesadd+=.php
 set termguicolors
 set noswapfile
 set autowrite
-set autochdir
+"set autochdir
 set mouse=a
 set sidescroll=1
 set breakindent
@@ -155,7 +155,7 @@ endfunction
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format
 " <C-g>u breaks current undo, please make your own choice.
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+" inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 set pastetoggle=<F2>
 
@@ -164,29 +164,29 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " Disable Arrow Keys
 " Remove newbie crutches in Command Mode
-cnoremap <Down> <Nop>
-cnoremap <Left> <Nop>
-cnoremap <Right> <Nop>
-cnoremap <Up> <Nop>
+"cnoremap <Down> <Nop>
+"cnoremap <Left> <Nop>
+"cnoremap <Right> <Nop>
+"cnoremap <Up> <Nop>
 
 " Remove newbie crutches in Insert Mode
-inoremap <Down> <Nop>
-inoremap <Left> <Nop>
-inoremap <Right> <Nop>
-inoremap <Up> <Nop>
+"inoremap <Down> <Nop>
+"inoremap <Left> <Nop>
+"inoremap <Right> <Nop>
+"inoremap <Up> <Nop>
 
 " Remove newbie crutches in Normal Mode
-nnoremap <Down> <Nop>
-nnoremap <Left> <Nop>
-nnoremap <Right> <Nop>
-nnoremap <Up> <Nop>
+"nnoremap <Down> <Nop>
+"nnoremap <Left> <Nop>
+"nnoremap <Right> <Nop>
+"nnoremap <Up> <Nop>
 
 " Remove newbie crutches in Visual Mode
-vnoremap <Down> <Nop>
-vnoremap <Left> <Nop>
-vnoremap <Right> <Nop>
-vnoremap <Up> <Nop>
-
+"vnoremap <Down> <Nop>
+"vnoremap <Left> <Nop>
+"vnoremap <Right> <Nop>
+"vnoremap <Up> <Nop>
+"
 " vim-commentary: installed via webinstall.dev/vim-commentary
 source ~/.vim/plugins/commentary.vim
 
