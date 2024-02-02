@@ -1,5 +1,4 @@
 #!/bin/bash
-
 LOG_FILE="storage/logs/laravel.log"
 
 clear
