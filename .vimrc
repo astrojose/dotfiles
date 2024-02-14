@@ -27,10 +27,7 @@ set breakindentopt=sbr
 "set showbreak=↪>\
 "set guitablabel=\[%N\]\ %t\ %M
 
-
 set grepprg=grep\ -nrI\ --exclude-dir=target\ --exclude-dir=tmp\ --exclude-dir=log\ --exclude="*.min.js"\ --exclude="*.log"\ $*\ /dev/null
-
-
 
 call plug#begin()
 " ES2015 code snippets (Optional)
@@ -203,3 +200,13 @@ map gf :edit <cfile><cr>
 " Maintain the cursor positioin when yaking a visual seleection
 vnoremap y myy`y
 vnoremap Y myY`y
+let NERDTreeShowHidden=1
+
+" Set file dir as current working dir
+autocmd BufRead * cd %:p:h
+
+" Use FZF for file searching
+set rtp+=~/.fzf
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+nnoremap <C-f> :FZF<CR>
+

@@ -1,4 +1,5 @@
-#!/bin/bash
+11 sudo rm -rvf /Library/Caches/*
+ 12 sudo rm -rvf /System/Library/Caches/*#!/bin/bash
 
 read -p "This script will clear macOS caches and unnecessary files. Continue? (y/n): " confirm
 

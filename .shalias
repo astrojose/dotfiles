@@ -1,9 +1,8 @@
-
 # Bash environment 
 alias lh='l -hs'
 alias x='exit'
 alias ':x'='x'
-#
+
 # Fast open
 alias o="open ."
 alias python=python3
@@ -26,7 +25,7 @@ alias vii='vim .'
 
 # Directory & Files
 alias work='cd ~/Code/Works'
-alias her='cd ~/Code/Works/art'
+alias iher='cd ~/Code/Works/art'
 alias work='cd ~/Code/Works'
 alias war='cd ~/Code/Me'
 alias ..='cd ..'
@@ -34,7 +33,7 @@ alias ...='cd ../../'
 
 # Git
 alias git=hub
-
+alias nah='git reset --hard;git clean -df'
 alias git-pmd='git pull-request -op -a astrojose -F - < pr.md'
 alias gitacm='git add && git cm'
 alias gitdiff='git diff '
@@ -51,33 +50,36 @@ alias gitadd='git add .'
 
 # General 
 alias art="php artisan"
-alias a="php artisan"
 alias tinker="php artisan tinker"
 alias v='xclip -o'
 alias ip3='ipython3'
-# PHPUnit test commands
 
 # HTTP Servers
 alias 'phs'='php -S localhost:9000'
 alias 'pys'='python3 -m http.server'
-# with filter
-alias 'tef'='art test --filter'
-alias 'teff'='./vendor/bin/phpunit --filter Feature/*'
-alias 'tefu'='./vendor/bin/phpunit --filter Unit/*'
-#with group
-alias 'teg'='./vendor/bin/phpunit --group'
 
-
+# Edit common files 
+alias ohmyzsh="vim ~/.oh-my-zsh"
 alias shconfig="vim ~/.zshrc"
-alias shalias="vim ~/dotfiles/.shalias"
-alias shenv="vim ~/dotfiles/.shenv"
-alias virc="vim ~/dotfiles/.vimrc"
-alias ohmybash="vim ~/.oh-my-bash"
+alias shalias="cd ~/dotfiles; vim .shalias"
+alias dots="cd ~/dotfiles && vim ."
+alias shenv="cd ~/dotfiles && vim .shenv"
+alias vimrc="cd ~/dotfiles  && vim .vimrc"
+alias ohmybash="cd ~/dotfiles && vim .oh-my-bash"
 alias sr='source ~/.zshrc'
 
 alias pretty='python3 -m json.tool'
 alias deploy-uzo='source ~/dotfiles/.scripts/deploy/uzo-web.sh'
 
+# Some new alias
+alias lalog="~/dotfiles/.scripts/laravel-logs"
+
+# Functions
+mkcdir ()
+{
+    mkdir -p -- "$1" &&
+    cd -P -- "$1"
+}
 
 alias git=hub
 alias exa=ls
@@ -105,12 +107,18 @@ alias clearmac="bash ~/dotfiles/.scripts/cleanup.sh"
 alias sudo='sudo '
 alias df='duf'
 alias tree=tre
-alias cat='bat'
 alias her='cd ~/Herd'
-alias cat='bat'
 
 #alias cat='bat'
-
 alias runp="lsof -i "
 alias usage='du -h -d1'
 alias brewup='brew update; brew upgrade; brew cleanup -s; brew doctor'
+
+# Open folder into vim
+_v() {
+  cd "$1" && vim .
+}
+#
+alias v='_v'
+
+
