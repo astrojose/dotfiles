@@ -9,10 +9,12 @@ alias python=python3
 
 # List all files colorized in long format
 alias l="ls -laF"
-
+alias v='f() { cd "$1" && vim .; unset -f f; }; f'
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+alias vidian="v ~/Library/Mobile\ Documents/iCloud\~md\~obsidian/Documents/Obsidian"
 
 alias cl='clear'
 alias term='open -a Terminal'
@@ -33,7 +35,6 @@ alias ...='cd ../../'
 
 # Git
 alias git=hub
-alias nah='git reset --hard;git clean -df'
 alias git-pmd='git pull-request -op -a astrojose -F - < pr.md'
 alias gitacm='git add && git cm'
 alias gitdiff='git diff '
@@ -84,8 +85,8 @@ mkcdir ()
 alias git=hub
 alias exa=ls
 #alias bat=cat
-alias pstorm=phpstorm
-alias wstorm=webstorm
+alias storm=phpstorm1
+alias charm=pycharm
 
 # FROM FREEK.DEV
 # IP addresses

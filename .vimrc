@@ -43,12 +43,21 @@ Plug 'wakatime/vim-wakatime'
 Plug 'jwalton512/vim-blade'
 Plug 'jacoborus/tender.vim'
 Plug 'rosenfeld/rgrep.vim'
+
+Plug 'leafgarland/typescript-vim'
+
+
+" LSP for typescript
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+
 Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'doums/darcula'
 Plug 'voldikss/vim-floaterm'
 Plug 'tpope/vim-surround'
+Plug 'PsychoLlama/further.vim' " Follow ts/js imports
 
 call plug#end()
 
@@ -203,10 +212,12 @@ vnoremap Y myY`y
 let NERDTreeShowHidden=1
 
 " Set file dir as current working dir
-autocmd BufRead * cd %:p:h
+" autocmd BufRead * cd %:p:h
 
 " Use FZF for file searching
 set rtp+=~/.fzf
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
 nnoremap <C-f> :FZF<CR>
 
+set incsearch  " Enable incremental search
+set hlsearch   " Enable highlight search

@@ -14,7 +14,7 @@
 
 [core]
     pager = delta
-	excludesfile = /Users/astrojose/.gitignore
+    excludesfile = /Users/astrojose/.gitignore
     editor = vim
 
 [interactive]
@@ -48,10 +48,18 @@
 	uncommit = 'reset HEAD^'
   cleanup = "!git branch --merged | grep  -v '\\*\\|main\\|develop' | xargs -n 1 -r git branch -d"
   pmd = "!f() { git pull-request -op -a astrojose -F - < pr.md; }; f"
-
+  nah = "!f(){ git reset --hard; git clean -df; if [ -d ".git/rebase-apply" ] || [ -d ".git/rebase-merge" ]; then git rebase --abort; fi; }; f"
 
 
 [commit]
 	template = /Users/astrojose/.gitmessage
 [hub]
 	protocol = git
+[rerere]
+	enabled = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[fetch]
+	prune = true
